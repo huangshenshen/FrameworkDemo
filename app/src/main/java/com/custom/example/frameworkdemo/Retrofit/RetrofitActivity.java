@@ -57,10 +57,8 @@ public class RetrofitActivity extends AppCompatActivity {
             public void onResponse(Call<Weather> call, Response<Weather> response) {
                 if (response.isSuccessful()){
                     Weather weather = response.body();
-                    Log.i("aaa","请求的数据"+weather.toString()+"----------"+weather.getResult().toString()+"=====");
                     if (weather!=null){
-                        Weather.ResultBean result = weather.getResult();
-                        Log.i("aaa","result"+result+"\r\t-------"+result.getSk().toString());
+                        Log.i("aaa","---"+response.body().getResult().getToday().getCity());
                     }
 
                 }

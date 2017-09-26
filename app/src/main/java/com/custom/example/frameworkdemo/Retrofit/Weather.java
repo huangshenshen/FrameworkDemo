@@ -51,6 +51,15 @@ public class Weather {
     }
 
     public static class ResultBean {
+        @Override
+        public String toString() {
+            return "ResultBean{" +
+                    "sk=" + sk +
+                    ", today=" + today +
+                    ", future=" + future +
+                    '}';
+        }
+
         /**
          * sk : {"temp":"30","wind_direction":"北风","wind_strength":"1级","humidity":"39%","time":"17:21"}
          * today : {"temperature":"20℃~31℃","weather":"晴转多云","weather_id":{"fa":"00","fb":"01"},"wind":"西南风微风","week":"星期五","city":"郑州","date_y":"2017年09月22日","dressing_index":"炎热","dressing_advice":"天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。","uv_index":"强","comfort_index":"","wash_index":"较适宜","travel_index":"较适宜","exercise_index":"较适宜","drying_index":""}
@@ -86,6 +95,17 @@ public class Weather {
         }
 
         public static class SkBean {
+            @Override
+            public String toString() {
+                return "SkBean{" +
+                        "temp='" + temp + '\'' +
+                        ", wind_direction='" + wind_direction + '\'' +
+                        ", wind_strength='" + wind_strength + '\'' +
+                        ", humidity='" + humidity + '\'' +
+                        ", time='" + time + '\'' +
+                        '}';
+            }
+
             /**
              * temp : 30
              * wind_direction : 北风
@@ -142,6 +162,27 @@ public class Weather {
         }
 
         public static class TodayBean {
+            @Override
+            public String toString() {
+                return "TodayBean{" +
+                        "temperature='" + temperature + '\'' +
+                        ", weather='" + weather + '\'' +
+                        ", weather_id=" + weather_id +
+                        ", wind='" + wind + '\'' +
+                        ", week='" + week + '\'' +
+                        ", city='" + city + '\'' +
+                        ", date_y='" + date_y + '\'' +
+                        ", dressing_index='" + dressing_index + '\'' +
+                        ", dressing_advice='" + dressing_advice + '\'' +
+                        ", uv_index='" + uv_index + '\'' +
+                        ", comfort_index='" + comfort_index + '\'' +
+                        ", wash_index='" + wash_index + '\'' +
+                        ", travel_index='" + travel_index + '\'' +
+                        ", exercise_index='" + exercise_index + '\'' +
+                        ", drying_index='" + drying_index + '\'' +
+                        '}';
+            }
+
             /**
              * temperature : 20℃~31℃
              * weather : 晴转多云
@@ -324,6 +365,19 @@ public class Weather {
         }
 
         public static class FutureBean {
+            @Override
+            public String toString() {
+                return "FutureBean{" +
+                        "day_20170922=" + day_20170922 +
+                        ", day_20170923=" + day_20170923 +
+                        ", day_20170924=" + day_20170924 +
+                        ", day_20170925=" + day_20170925 +
+                        ", day_20170926=" + day_20170926 +
+                        ", day_20170927=" + day_20170927 +
+                        ", day_20170928=" + day_20170928 +
+                        '}';
+            }
+
             /**
              * day_20170922 : {"temperature":"20℃~31℃","weather":"晴转多云","weather_id":{"fa":"00","fb":"01"},"wind":"西南风微风","week":"星期五","date":"20170922"}
              * day_20170923 : {"temperature":"19℃~30℃","weather":"多云转阴","weather_id":{"fa":"01","fb":"02"},"wind":"东南风3-4 级","week":"星期六","date":"20170923"}
@@ -414,6 +468,18 @@ public class Weather {
                 private String wind;
                 private String week;
                 private String date;
+
+                @Override
+                public String toString() {
+                    return "Day20170922Bean{" +
+                            "temperature='" + temperature + '\'' +
+                            ", weather='" + weather + '\'' +
+                            ", weather_id=" + weather_id +
+                            ", wind='" + wind + '\'' +
+                            ", week='" + week + '\'' +
+                            ", date='" + date + '\'' +
+                            '}';
+                }
 
                 public String getTemperature() {
                     return temperature;
@@ -506,6 +572,18 @@ public class Weather {
                 private String wind;
                 private String week;
                 private String date;
+
+                @Override
+                public String toString() {
+                    return "Day20170923Bean{" +
+                            "temperature='" + temperature + '\'' +
+                            ", weather='" + weather + '\'' +
+                            ", weather_id=" + weather_id +
+                            ", wind='" + wind + '\'' +
+                            ", week='" + week + '\'' +
+                            ", date='" + date + '\'' +
+                            '}';
+                }
 
                 public String getTemperature() {
                     return temperature;
@@ -1042,5 +1120,15 @@ public class Weather {
                 }
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Weather{" +
+                "resultcode='" + resultcode + '\'' +
+                ", reason='" + reason + '\'' +
+                ", result=" + result +
+                ", error_code=" + error_code +
+                '}';
     }
 }
